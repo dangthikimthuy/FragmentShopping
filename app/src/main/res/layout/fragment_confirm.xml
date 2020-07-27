@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    tools:context=".fragment.ConfirmFragment">
+
+
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+
+    <LinearLayout
+
+        android:id="@+id/lnlConfirm"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+
+
+        <TextView
+
+            android:id="@+id/txtConfirm"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center"
+
+            android:text="Cảm ơn quý khách đã mua hàng"
+
+            android:textColor="@color/colorRed"
+
+            android:textSize="20sp" />
+
+
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+        android:id="@+id/fabConfirm"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:clickable="true"
+
+        app:layout_anchor="@+id/lnlConfirm"
+
+        app:layout_anchorGravity="bottom|right"
+
+        android:layout_margin="@dimen/fab_margin"
+
+        app:srcCompat="@drawable/ic_action_back"
+        tools:ignore="VectorDrawableCompat" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

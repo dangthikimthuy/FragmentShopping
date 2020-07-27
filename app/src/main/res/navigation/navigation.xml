@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/nav_graph"
+
+    app:startDestination="@id/listFragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+
+        android:id="@+id/addFragment"
+
+        android:name="vn.edu.ntu.dangthikimthuy.fragmentshopping.fragment.AddFragment"
+
+        android:label="fragment_add"
+
+        tools:layout="@layout/fragment_add" >
+
+        <action
+
+            android:id="@+id/action_addFragment_to_listFragment"
+
+            app:destination="@id/listFragment" />
+
+    </fragment>
+
+    <fragment
+
+        android:id="@+id/confirmFragment"
+
+        android:name="vn.edu.ntu.dangthikimthuy.fragmentshopping.fragment.ConfirmFragment"
+
+        android:label="fragment_confirm"
+
+        tools:layout="@layout/fragment_confirm" />
+
+    <fragment
+
+        android:id="@+id/listFragment"
+
+        android:name="vn.edu.ntu.dangthikimthuy.fragmentshopping.fragment.ListFragment"
+
+        android:label="fragment_list"
+
+        tools:layout="@layout/fragment_list" >
+
+        <action
+
+            android:id="@+id/action_listFragment_to_addFragment"
+
+            app:destination="@id/addFragment" />
+
+        <action
+
+            android:id="@+id/action_listFragment_to_shoppingFragment"
+
+            app:destination="@id/shoppingFragment" />
+
+    </fragment>
+
+    <fragment
+
+        android:id="@+id/shoppingFragment"
+
+        android:name="vn.edu.ntu.dangthikimthuy.fragmentshopping.fragment.ShoppingFragment"
+
+        android:label="fragment_shopping"
+
+        tools:layout="@layout/fragment_shopping" >
+
+        <action
+
+            android:id="@+id/action_shoppingFragment_to_confirmFragment"
+
+            app:destination="@id/confirmFragment"
+
+            app:popUpTo="@id/shoppingFragment"
+
+            app:popUpToInclusive="true"/>
+
+    </fragment>
+
+</navigation>
